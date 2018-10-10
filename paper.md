@@ -1,17 +1,8 @@
 # Summary
 
-``NodeLab`` is a MATLAB-based library for generating and refining unstructured nodes in 
-arbitrary domain. 
+``NodeLab`` is a MATLAB-based library for creating complex arbitrary geometries and generating and refining unstructured nodes in such domains. 
 
-``Gala`` is an Astropy-affiliated Python package for galactic dynamics. Python
-enables wrapping low-level languages (e.g., C) for speed without losing
-flexibility or ease-of-use in the user-interface. The API for ``Gala`` was
-designed to provide a class-based and user-friendly interface to fast (C or
-Cython-optimized) implementations of common operations such as gravitational
-potential and force evaluation, orbit integration, dynamical transformations,
-and chaos indicators for nonlinear dynamics. ``Gala`` also relies heavily on and
-interfaces well with the implementations of physical units and astronomical
-coordinate systems in the ``Astropy`` package [@astropy] (``astropy.units`` and
+ package [@astropy] (``astropy.units`` and
 ``astropy.coordinates``).
 
 ``Gala`` was designed to be used by both astronomical researchers and by
