@@ -1,6 +1,6 @@
 # Summary
 
-``NodeLab`` is a MATLAB-based library for creating complex arbitrary geometries and generating and refining unstructured nodes in such domains. 
+``NodeLab`` is a MATLAB-based library for unstructured node-generation and adaptive refinement for meshfree modeling in arbitrary domains. 
 
  package [@astropy] (``astropy.units`` and
 ``astropy.coordinates``).
