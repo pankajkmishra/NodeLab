@@ -1,6 +1,6 @@
 # Summary
 
-``*NodeLab*`` is a MATLAB-based library for generating and refining unstructured nodes in 
+``NodeLab`` is a MATLAB-based library for generating and refining unstructured nodes in 
 arbitrary domain. 
 
 ``Gala`` is an Astropy-affiliated Python package for galactic dynamics. Python
