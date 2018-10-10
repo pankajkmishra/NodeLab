@@ -1,26 +1,6 @@
----
-title: 'NodeLab: A MATLAB package for unstructured node-generation for meshfree computing'
-tags:
-  - MATLAB
-  - Scientific Computing
-  - Meshfree Methods
-  - Meshless Methods
-  - Radial basis functions
-  - Numerical PDEs
-authors:
-  - name: Pankaj K Mishra
-    orcid: 0000-0003-0872-7098
-    affiliation: 1 # (Multiple affiliations must be quoted)
-affiliations:
- - name: Pankaj K Mishra, Department of Mathematics, Hong Kong Bapstist University
-   index: 1
-date: 13 August 2017
-bibliography: paper.bib
----
-
 # Summary
 
-``NodeLab`` is a MATLAB-based library for generating and refining unstructured nodes in 
+``*NodeLab*`` is a MATLAB-based library for generating and refining unstructured nodes in 
 arbitrary domain. 
 
 ``Gala`` is an Astropy-affiliated Python package for galactic dynamics. Python
