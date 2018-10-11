@@ -1,6 +1,6 @@
 # Summary
 
-``NodeLab`` is a MATLAB-based library for unstructured node-generation and adaptive refinement for meshfree modeling in arbitrary domains. 
+``NodeLab`` is a MATLAB-based library for unstructured node-generation and adaptive refinement for meshfree modeling in arbitrary domains. @[fornberg2015fast]
 
  package [@astropy] (``astropy.units`` and
 ``astropy.coordinates``).
@@ -14,6 +14,8 @@ design, and support for Astropy functionality in ``Gala`` will enable exciting
 scientific explorations of forthcoming data releases from the *Gaia* mission
 [@gaia] by students and experts alike. The source code for ``Gala`` has been
 archived to Zenodo with the linked DOI: [@zenodo]
+
+
 
 # Mathematics
 
