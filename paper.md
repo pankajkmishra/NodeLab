@@ -1,5 +1,7 @@
 # Summary
-Meshfree methods are cutting-edge numerical methods for numerical modeling, which unlike other mesh-based algorithm do not require an structured grid/elements in the domain. 
+Meshfree methods are cutting-edge numerical methods for numerical modeling, which unlike other mesh-based algorithms, do not require an structured grid/elements in the domain. These methods can work with scatterd nodes in the domain, however, the nature of the modeling problem often suggests a certain type of node-layout to get the most efficient modeling results. 
+
+
 Many real-world applications (like weather forecasting, tsunami modeling, and geophysical imaging) require to generate a large number of nodes in a significantly large arbitrary domain. Unlike the mesh-generation in the finite element method (FEM), the literature in node-generation for meshless computing is sparse. To make the present work reproducible and applicable, as a first step, we propose an approach for node generation, and refinement in arbitrary 2D domains. Some previous works regarding the node generation for meshfree computing --- especially, in the context of RBF-FD method are: \citep{fornberg2015fast,michaels2017node,shankar2018robust,vlasiuk2017fast,zamolo2018two}.
 
 ``NodeLab`` is a MATLAB-based library for unstructured node-generation and adaptive refinement for meshfree modeling in arbitrary domains. 
