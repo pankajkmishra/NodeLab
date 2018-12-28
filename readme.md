@@ -10,21 +10,25 @@ NodeLab is a simple MATLAB-package for unstructured node-generation and refineme
 * run the script 'setup.m'. This will add different directories of the NodeLab on your MATLAB path — only for the current session. Now you are ready to run the demos and generate nodes for your own project. 
 
 ## Tutorials
-##### 1. Regular nodes in circle within [-1,1]x[-1,1]
-```matlab {.line-numbers}
-fs= 100;
-[filt_b, filt_a]= butter(5, [10 14]/fs*2);
-state_acquire= ACQUIRE_FCN('init', 'fs',fs);
-state_filter= [];
-t_start= clock;
-while etime(clock, t_start) < 10*60,
-  cnt_new= AQCQUIRE_FCN(state_acquire);
-  [cnt_new, state_filter]= online_filt(cnt_new, state_filter, filt_b, filt.a);
-  cnt= proc_appendCnt(cnt, cnt_new);
-  mrk= struct('fs',cnt.fs, 'pos',size(cnt.x,1));
-  epo= proc_segmentation(cnt, mrk, [-500 0]);
-  fv= proc_logarithm( proc_variance( epo ));
-  out= apply_separatingHyperplane(LDA, fv.x(:));
-  send_xml_udp('cl_output', out);
+##### 1. test_1C 
+* Generate uniform points inside a circle within a bounding box (-1,1)^2. 
+```matlab
+clear varibale; close all; clc
+box    = [-1,-1; 1,1];
+hbdy   = 0.02;
+ptol   = 0.001;
+[b]    = draw_circ(0,0,1,2/hbdy);
+ctps   = [];
+%ctps   = [linspace(-0.5, 0.5,10); zeros(1,10)]';        
+radius = @(p,ctps) 0.05; % for fixed node-density
+%radius = @(p,ctps) 0.005+0.08*(min(pdist2(ctps, p))); % for variable node-density
+[xy]   = NodeLab2D(b.sdf,box,ctps,ptol, radius);
+[bdy]  = b.xy;
+clear box hbdy ptol ctps radius b
+%-------------------------------------
+plot(xy(:,1), xy(:,2),'.k','MarkerSize',12)
+hold on
+plot(bdy(:,1), bdy(:,2), '.k','MarkerSize',12)
+axis('square'); set(gca,'visible','off')
 end
 ```
