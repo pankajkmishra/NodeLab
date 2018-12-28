@@ -11,7 +11,7 @@ NodeLab is a simple MATLAB-package for unstructured node-generation and refineme
 
 ## Tutorials
 ## 1.1
-Generate uniform points inside a circle within a bounding box (-1,1)^2. 
+Generate nodes inside a circle within a bounding box (-1,1)^2 with no control points.
 ```matlab
 clear varibale; close all; clc
 box    = [-1,-1; 1,1];
@@ -33,8 +33,8 @@ axis('square'); set(gca,'visible','off')
 ```
 <img src="images/F1_1.png" width="500">
 
-##1.2
-Generate uniform points inside a circle within a bounding box (-1,1)^2 but keep a varibale-density being highest at (0,0).
+## 1.2
+Generate nodes inside a circle within a bounding box (-1,1)^2 but keep a varibale-density being highest at the single control point (0,0).
 ```matlab
 clear varibale; close all; clc
 box    = [-1,-1; 1,1];
@@ -53,3 +53,27 @@ plot(bdy(:,1), bdy(:,2), '.k','MarkerSize',12)
 axis('square'); set(gca,'visible','off')
 ```
 <img src="images/F1_2.png" width="500">
+
+## 1.3
+Generate nodes inside a circle within a bounding box (-1,1)^2 but keep a varibale-density being highest along a line between (-0.75,0) and (0.75,0).
+```matlab
+%-----------------------------------
+clear varibale; close all; clc
+box    = [-1,-1; 1,1];
+hbdy   = 0.02;
+ptol   = 0.001;
+[b]    = draw_circ(0,0,1,2/hbdy);
+%ctps   = [0, 0];
+ctps   = [linspace(-0.5, 0.5,10); zeros(1,10)]';        
+%radius = @(p,ctps) 0.05; % for fixed node-density
+radius = @(p,ctps) 0.005+0.08*(min(pdist2(ctps, p))); % for variable node-density
+[xy]   = NodeLab2D(b.sdf,box,ctps,ptol, radius);
+[bdy]  = b.xy;
+clear box hbdy ptol ctps radius b
+%-------------------------------------
+plot(xy(:,1), xy(:,2),'.k','MarkerSize',12)
+hold on
+plot(bdy(:,1), bdy(:,2), '.k','MarkerSize',12)
+axis('square'); set(gca,'visible','off')
+```
+<img src="images/F1_3.png" width="500">
