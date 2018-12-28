@@ -77,3 +77,14 @@ plot(bdy(:,1), bdy(:,2), '.k','MarkerSize',12)
 axis('square'); set(gca,'visible','off')
 ```
 <img src="images/F1_3.png" width="500">
+
+<table border="0">
+ <tr>
+    <td><b style="font-size:30px">Title</b></td>
+    <td><b style="font-size:30px">Title 2</b></td>
+ </tr>
+ <tr>
+    <td>Lorem ipsum ...</td>
+    <td><img src="images/F1_3.png" width="500"></td>
+ </tr>
+</table>
