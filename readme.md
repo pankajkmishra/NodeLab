@@ -10,8 +10,7 @@ NodeLab is a simple MATLAB-package for unstructured node-generation and refineme
 * run the script 'setup.m'. This will add different directories of the NodeLab on your MATLAB path — only for the current session. Now you are ready to run the demos and generate nodes for your own project. 
 
 # Tutorials
-#### 1. Regular nodes in circle within [-1,1]^2
-Omega = (-1,1)</sup>^2 
+##### 1. Regular nodes in circle within [-1,1]x[-1,1]
 ```matlab {.line-numbers}
 fs= 100;
 [filt_b, filt_a]= butter(5, [10 14]/fs*2);
