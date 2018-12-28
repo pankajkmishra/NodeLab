@@ -11,7 +11,7 @@ NodeLab is a simple MATLAB-package for unstructured node-generation and refineme
 
 # Tutorials
 #### 1. Regular nodes in circle within [-1,1]^2
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" /> 
+h<sub>&theta;</sub>(x) = &theta;<sub>o</sub> x + &theta;<sub>1</sub>x  
 ```matlab {.line-numbers}
 fs= 100;
 [filt_b, filt_a]= butter(5, [10 14]/fs*2);
