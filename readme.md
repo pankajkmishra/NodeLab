@@ -30,4 +30,4 @@ hold on
 plot(bdy(:,1), bdy(:,2), '.k','MarkerSize',12)
 axis('square'); set(gca,'visible','off') 
 ```
-![F1] (https://github.com/pankajkmishra/NodeLab/blob/master/images/F1.png)
+![F1] (https://raw.github.com/pankajkmishra/NodeLab/master/images/F1.png)
