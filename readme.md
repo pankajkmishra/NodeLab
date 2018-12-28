@@ -1,4 +1,4 @@
-## NodeLab 
+# <p style="text-align: center;"> NodeLab </p>  
   NodeLab is a simple MATLAB-package for unstructured node-generation and refinement for meshfree modeling in arbitrary domains. The final output is two variables, which can be seen in the 'workspace'.
   * *xy* — an array containing interior nodes.
   * *bdy*— an array containing boundary nodes. 
