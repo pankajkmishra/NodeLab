@@ -10,8 +10,7 @@ NodeLab is a simple MATLAB-package for unstructured node-generation and refineme
 * run the script 'setup.m'. This will add different directories of the NodeLab on your MATLAB path — only for the current session. Now you are ready to run the demos and generate nodes for your own project. 
 
 ## Tutorials
-### 1. test_1C 
-Generate uniform points inside a circle within a bounding box (-1,1)^2. 
+1. Generate uniform points inside a circle within a bounding box (-1,1)^2. 
 ```matlab
 clear varibale; close all; clc
 box    = [-1,-1; 1,1];
