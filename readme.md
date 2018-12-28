@@ -1,7 +1,7 @@
 ## NodeLab 
   NodeLab is a simple MATLAB-package for node-generation and adaptive refinement for meshfree modeling in arbitrary domains. The final output is two variables, which can be seen in the 'workspace'.
-  * *xy* array having interior nodes.
-  * *bdy* array having boundary nodes. 
+  * *xy* — an array containing interior nodes.
+  * *bdy*— an array containing boundary nodes. 
 
 ### Installation
 * Download the package on your PC. 
