@@ -30,4 +30,4 @@ hold on
 plot(bdy(:,1), bdy(:,2), '.k','MarkerSize',12)
 axis('square'); set(gca,'visible','off') 
 ```
-<img src="images/unt.png" width="200">
+<img src="images/unt.png" width="500">
