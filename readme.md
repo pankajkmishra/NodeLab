@@ -11,7 +11,7 @@ NodeLab is a simple MATLAB-package for unstructured node-generation and refineme
 
 # Tutorials
 #### 1. Regular nodes in circle within [-1,1]^2
-```matlab
+```matlab {.line-numbers}
 fs= 100;
 [filt_b, filt_a]= butter(5, [10 14]/fs*2);
 state_acquire= ACQUIRE_FCN('init', 'fs',fs);
