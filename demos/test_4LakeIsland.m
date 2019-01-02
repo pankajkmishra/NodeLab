@@ -17,3 +17,4 @@ radius = @(p,ctps) 3 + 0.2*(min(pdist2(ctps, p)));
 plot(x(:,1), x(:,2),'.k','MarkerSize',8); hold on
 plot(b.xy(:,1), b.xy(:,2), '.k','MarkerSize', 8); axis('square');
 set(gca,'visible','off')
+
