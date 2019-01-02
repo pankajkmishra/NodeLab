@@ -2,7 +2,7 @@
 clear variables; close all; clc
 %--------------------------------------------
 box  = [100.0, 145.0; 634.0, 799.0 ];
-hbdy = 5; 
+hbdy = 6; 
 ptol = 1;
 [b]  = make_domain('lake.txt'); % process lake points as boundary
 [bdy] = bsmooth(b.xy, hbdy);
