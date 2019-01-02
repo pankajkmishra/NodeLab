@@ -12,4 +12,5 @@ extsrcDir = strcat(sourceDir,dirslash,'ext');
 demoDir = strcat(thisDir,dirslash,'demos');
 
 addpath(thisDir,sourceDir,extsrcDir,demoDir,'-begin');
-clc
+clc 
+
