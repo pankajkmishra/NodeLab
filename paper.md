@@ -19,6 +19,8 @@ bibliography: paper.bib
 ---
 
 # Summary
+Meshless or meshfree methods, which work globally or locally are up-and-coming numerical methods for numerical modeling, which unlike other mesh-based algorithms, do not require an structured grid/elements in the domain. These methods can work with scattered nodes in the domain, however, the nature of the modeling problem often suggests a certain type of node-layout to get the most efficient modeling results.
+
 ``NodeLab`` is a simple MATLAB-repository for node-generation and adaptive refinement for testing, and implementing various meshfree methods for solving PDEs in arbitrary domains. The core-algorithm behind this package is the *node-placing* [@Fornberg:2015] approach because of its simplicity, computational speed and the quality of the distribution. The *node-placing* method has been used for creating initial node-distribution in the \emph{bounding-box} of the desired domain. To represent the geometry of the domain, NodeLab couples the Signed-distance function (SDF) [@Persson:2004], which can computed based on *a priory* information about the domain. As a results, NodeLab can take the following geometric objects as inputs: 
 
 * simple shapes (like rectangles, and circles), required to create the desired geometry. For example, the SDF for a typical *plate with a hole* can be computed through a rectangle and a circle. 
