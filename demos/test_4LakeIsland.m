@@ -2,7 +2,7 @@
 clear variables; close all; clc
 %-----------------------------------------
 box  = [100.0, 145.0; 634.0, 799.0 ];
-hbdy = 3; 
+hbdy = 5; 
 ptol = 1;
 [b1]  = make_domain('lake.txt'); % process lake points as boundary
 [b2]  = make_domain('island.txt');
@@ -11,7 +11,7 @@ b1.xy = bsmooth(b1.xy, hbdy);
 b2.xy = bsmooth(b2.xy, hbdy);
 b.xy = [b1.xy; b2.xy];
 ctps = b.xy;
-radius = @(p,ctps) 2 + 0.2*(min(pdist2(ctps, p)));
+radius = @(p,ctps) 3 + 0.2*(min(pdist2(ctps, p)));
 [x]  = NodeLab2D(b.sdf,box,ctps,ptol,radius);
 %-----------------------------------------
 plot(x(:,1), x(:,2),'.k','MarkerSize',8); hold on
