@@ -1,3 +1,23 @@
+---
+title: 'NodeLab: A MATLAB package for meshfree node-generation and adaptive refinement'
+tags:
+  - MATLAB
+  - RBF
+  - Scientific Computing
+  - Numerical Modeling
+  - Meshfree Methods
+  - Meshless Methods
+authors:
+  - name: Pankaj K Mishra
+    orcid: 0000-0003-4907-4724
+    affiliation: 1
+affiliations:
+ - name: Department of Mathematics, Hong Kong Baptist University
+   index: 1
+date: 2 January 2019
+bibliography: paper.bib
+---
+
 # Summary
 Meshless/meshfree methods, which work globally or locally are up-and-coming numerical methods for numerical modeling, which unlike other mesh-based algorithms, do not require an structured grid/elements in the domain. These methods can work with scattered nodes in the domain, however, the nature of the modeling problem often suggests a certain type of node-layout to get the most efficient modeling results.
 
