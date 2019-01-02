@@ -2,13 +2,13 @@
 clear variables; close all; clc
 %------------------------------------------------
 box    = [-1,-1; 1,1];
-hbdy   = 0.05;
-ptol   = 0.01;
-ctps   = [];
-%ctps   = [-0.5,1; 0.5, 1];
+hbdy   = 0.02;
+ptol   = 0.001;
+%ctps   = [];
+ctps   = [-0.5,1; 0.5, 1];
 %ctps   = [linspace(-0.5, 0.5,10); 0.5*ones(1,10)]';
-%radius = @(p,ctps) 0.005+0.05*(min(pdist2(ctps, p)));
-radius = @(p, ctps) 0.05;
+radius = @(p,ctps) 0.005+0.05*(min(pdist2(ctps, p)));
+%radius = @(p, ctps) 0.05;
 [b]    = draw_rect(-1,-1,1,1,2/hbdy);
 [xy]   = NodeLab2D(b.sdf,box,ctps,ptol,radius);
 [bdy]  = b.xy;
