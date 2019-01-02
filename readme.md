@@ -163,3 +163,71 @@ plot(bdy(:,1), bdy(:,2), '.k','MarkerSize', 12); axis('square')
 set(gca,'visible','off')
 ```
 <img src="images/F2_3.png" width="500">
+
+
+## 3.1 
+Generate nodes in  a Island model.  
+```matlab 
+clear variables; close all; clc
+%--------------------------------------------
+box  = [100.0, 145.0; 634.0, 799.0 ];
+hbdy = 5; 
+ptol = 1;
+[b]  = make_domain('lake.txt'); % process lake points as boundary
+[bdy] = bsmooth(b.xy, hbdy);
+ctps  = bdy;
+radius = @(p,ctps) 6 ; 
+[xy]  = NodeLab2D(b.sdf,box,ctps,ptol,radius);
+%--------------------------------------------
+plot(xy(:,1), xy(:,2),'.k','MarkerSize',10); hold on
+plot(bdy(:,1), bdy(:,2), '.k','MarkerSize', 10); axis('square')
+set(gca,'visible','off')
+``` 
+<img src="images/F3_1.png" width="500"> 
+
+## 3.2 
+
+Generate nodes in  a Island model. Variable-density being maximum at the boundary.   
+```matlab 
+clear variables; close all; clc
+%--------------------------------------------
+box  = [100.0, 145.0; 634.0, 799.0 ];
+hbdy = 5; 
+ptol = 1;
+[b]  = make_domain('lake.txt'); % process lake points as boundary
+[bdy] = bsmooth(b.xy, hbdy);
+ctps  = bdy;
+radius = @(p,ctps) 6 ; 
+[xy]  = NodeLab2D(b.sdf,box,ctps,ptol,radius);
+%--------------------------------------------
+plot(xy(:,1), xy(:,2),'.k','MarkerSize',10); hold on
+plot(bdy(:,1), bdy(:,2), '.k','MarkerSize', 10); axis('square')
+set(gca,'visible','off')
+``` 
+<img src="images/F3_2.png" width="500"> 
+
+## 3.3 
+Generate nodes in  a Island model having a small lake inside it.  Varibale-density being maximum at each boundaries. 
+```matlab
+% unit circle
+clear variables; close all; clc
+%-----------------------------------------
+box  = [100.0, 145.0; 634.0, 799.0 ];
+hbdy = 3; 
+ptol = 1;
+[b1]  = make_domain('lake.txt'); % process lake points as boundary
+[b2]  = make_domain('island.txt');
+b.sdf = @(p) max(b1.sdf(p), -b2.sdf(p)) ;
+b1.xy = bsmooth(b1.xy, hbdy);
+b2.xy = bsmooth(b2.xy, hbdy);
+b.xy = [b1.xy; b2.xy];
+ctps = b.xy;
+radius = @(p,ctps) 2 + 0.2*(min(pdist2(ctps, p)));
+[x]  = NodeLab2D(b.sdf,box,ctps,ptol,radius);
+%-----------------------------------------
+plot(x(:,1), x(:,2),'.k','MarkerSize',8); hold on
+plot(b.xy(:,1), b.xy(:,2), '.k','MarkerSize', 8); axis('square');
+set(gca,'visible','off')
+``` 
+<img src="images/F3_3.png" width="500"> 
+
