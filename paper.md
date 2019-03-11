@@ -30,6 +30,6 @@ sampled. NodeLab uses curve-interpolation to redisctribute the input point-cloud
 
 The node-distribution in ``NodeLab`` can be  refined non-uniformly by adapting the information provided through *control-points*, which are an input from the user. *control-points* provide spatial locations where the user needs relatively finer nodes. 
 
-Future developments in this package may include its extension to 3D, and surfaces, an optional graphical user interface, improvement in the adaptivity by using Machine Learning algorithms to decide the *control-points*,  etc. ``NodeLab`` is intended to be an open-source and collaborative project, where developers and users could contribute to make (and keep) it --- state-of-the-art by incorporating the improvements as the research in this field grows with time.
+Future developments in this package may include its extension to 3D, and surfaces, an optional graphical user interface, improvement in the adaptivity by using Machine Learning algorithms to decide the *control-points*,  etc. ``NodeLab`` is intended to be an open-source and collaborative project, where developers and users could contribute to make (and keep) it -state-of-the-art by incorporating the improvements as the research in this field grows with time.
  
 # References
