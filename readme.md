@@ -1,6 +1,7 @@
 ## NodeLab  
-NodeLab is a simple MATLAB-package for unstructured node-generation and refinement for meshfree modeling in arbitrary domains. The final output is two variables, which can be seen in the 'workspace'.
-  * Input: *box* - a vector defining the bounding box of the domain.
+NodeLab is a simple MATLAB-package for unstructured node-generation and refinement for meshfree modeling in arbitrary domains. The final can be seen in the 'workspace'. Following are the description of Input/Output variables of NodeLab:
+  * Input: 
+  ** *box* - a vector defining the bounding box of the domain.
   * Input: *hbdy* - the density of the boundary poit-cloud
   * Input: *ptol* - minimum distance between two nodes
   * Input: *ctps* - control-points for density variation 
