@@ -1,4 +1,8 @@
 function p = node_placing (box ,ninit, dotmax,ctps, radius)
+%This code has been modified from the following paper
+%Bengt Fornberg, Natasha Flyer (2015),
+%Fast generation of 2-D node distributions for mesh-free PDE discretizations,
+%Computers & Mathematics with Applications, 69(7) 531-544
 % --- Input parameters ---
 % box    Size of box to be filled by nodes: [xmin,xmax,ymin,ymax]
 % ninit  Upper limit on number of PDP entries
