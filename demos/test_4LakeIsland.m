@@ -1,4 +1,10 @@
-% unit circle
+%% test_4LakeIsland
+% This test generates non-uniform nodes inside a arbitrary 
+% Lake-shaped domain having a small island inside - within a 
+% bounding box (100.0 145.0)x(634.0 799.0). 
+% The node-density is highest near the boundary. In this test, the
+% boundary points have been used as the control-points: 'ctps'
+
 clear variables; close all; clc
 %-----------------------------------------
 box  = [100.0, 145.0; 634.0, 799.0 ];

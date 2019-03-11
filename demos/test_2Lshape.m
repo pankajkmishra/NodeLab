@@ -1,3 +1,8 @@
+%% test_2LShape.m 
+% This test generates non-uniform nodes in a L-shaped domain within 
+% a bounding box (-1,1)^2. The node-density is highest at the 
+% reentrant corner [0,0]. 
+
 clear variables; close all; clc
 %----------------------------------------------------
 box    = [-1, -1; 1, 1 ];

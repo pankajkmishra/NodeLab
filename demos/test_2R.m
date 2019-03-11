@@ -1,4 +1,8 @@
-% unit circle
+%% test_2R
+% % This test generates non-uniform nodes inside a rectangle (square) within 
+% a bounding box (-1,1)^2. The node-density is highest at the 
+% two control points: 'ctps'.
+
 clear variables; close all; clc
 %------------------------------------------------
 box    = [-1,-1; 1,1];
@@ -17,3 +21,4 @@ clear box hbdy ptol ctps radius b
 plot(xy(:,1), xy(:,2),'.k','MarkerSize',12);hold on
 plot(bdy(:,1), bdy(:,2), '.k','MarkerSize',12); axis('square')
 set(gca,'visible','off')
+

@@ -1,5 +1,7 @@
 %% test_1C
-% Description of this demo
+% This test generates non-uniform nodes inside a circle within 
+% a bounding box (-1,1)^2. The node-density is highest at the 
+% two control points: 'ctps'. 
 
 %%
 clear; close all; clc;
@@ -16,8 +18,24 @@ ctps   = [-0.75,0; 0.75,0]; %Define point concentration
 %Define distance function for node density metric
 radius = @(p,ctps) 0.005+0.08*(min(pdist2(ctps, p))); % for variable node-density
 
+%% Use |NodeLab2D| to get point spread 
+
+[xy]   = NodeLab2D(b.sdf,box,ctps,ptol, radius);
+[bdy]  = b.xy;
+
 %% 
-% Visualizing the control parameters required for |NodeLab2D|
+% Visualizing
+
+figure; hold on;
+plot(xy(:,1), xy(:,2),'.k','MarkerSize',6)
+plot(bdy(:,1), bdy(:,2), '.k','MarkerSize',6)
+axis tight; axis square; 
+drawnow; 
+
+%% 
+% The following part has been included for visualizing the control parameters required for |NodeLab2D|
+% You can add similar visualization section for other demos or your own experiment 
+% to have a better understanding of NodeLab. 
 
 n=25;
 [X,Y]=meshgrid(linspace(box(1,1),box(2,1),n),linspace(box(1,2),box(2,2),n));
@@ -33,19 +51,4 @@ hl(4)=surf(X,Y,zeros(size(X)),R,'EdgeColor','none','FaceColor','interp','FaceAlp
 axis tight; axis square; 
 colormap(jet(250));
 legend(hl,{'Boundary','Bounding box','Mesh density control points','Mesh density visualization'},'Location','northeastoutside')
-drawnow; 
-
-%% Use |NodeLab2D| to get point spread
-% The input for |NodeLab2D| is ...
-
-[xy]   = NodeLab2D(b.sdf,box,ctps,ptol, radius);
-[bdy]  = b.xy;
-
-%% 
-% Visualizing
-
-figure; hold on;
-plot(xy(:,1), xy(:,2),'.k','MarkerSize',6)
-plot(bdy(:,1), bdy(:,2), '.k','MarkerSize',6)
-axis tight; axis square; 
 drawnow; 
