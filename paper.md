@@ -25,7 +25,7 @@ Meshless or meshfree methods, which work globally or locally are up-and-coming n
 
 * simple shapes (like rectangles, and circles), required to create the desired geometry. For example, the SDF for a typical *plate with a hole* can be computed through a rectangle and a circle. 
 * a level-set representation $D(x,y)=0$ of the domain, or 
-* some discrete set of point cloud on the boundary, which need not to be uniformly
+* some discrete sets of point clouds on the boundary, which need not be uniformly
 sampled. NodeLab uses curve-interpolation to redisctribute the input point-cloud as per user-defined density, which provides the flexibility to create the domain by manually digitizing of the geometry from any image.
 
 The node-distribution in ``NodeLab`` can be  refined non-uniformly by adapting the information provided through *control-points*, which are an input from the user. *control-points* provide spatial locations where the user needs relatively finer nodes. 
