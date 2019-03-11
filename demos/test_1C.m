@@ -33,9 +33,9 @@ axis tight; axis square;
 drawnow; 
 
 %% 
-% The following part has been included for visualizing the control parameters required for |NodeLab2D|
-% You can add similar visualization section for other demos or your own experiment 
-% to have a better understanding of NodeLab. 
+% The following part has been included for visualizing the control parameters required for |NodeLab2D| 
+% You can add similar visualization sections to other demos or your own code
+% to have a better understanding of the inputs used in NodeLab. 
 
 n=25;
 [X,Y]=meshgrid(linspace(box(1,1),box(2,1),n),linspace(box(1,2),box(2,2),n));
