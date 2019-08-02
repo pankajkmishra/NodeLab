@@ -4,7 +4,7 @@ function [p]= NodeLab2D(fd,bbox,ctps,ptol,radius,varargin)
  p   = p(feval(fd,p,varargin{:})< eps,:); 
 
 % if yoou want some fixed nodes 
-if ~isempty(ctps),
+if ~isempty(ctps)
     p=setdiff(p,ctps,'rows'); 
 end
 
