@@ -6,7 +6,7 @@ function [p]= NodeLab2D(fd,bbox,ctps,ptol,radius,varargin)
 % if yoou want some fixed nodes 
 if ~isempty(ctps)
     p=setdiff(p,ctps,'rows'); 
-end
+end 
 
 pfix=unique(ctps,'rows'); % REMOVE DUPLICATE ONES
 p=[pfix; p];                                        
