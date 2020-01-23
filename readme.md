@@ -1,3 +1,8 @@
+
+
+Mishra, Pankaj K (2019). NodeLab: A MATLAB package for meshfree node-generation and adaptive refinement. Journal of Open Source Software, 4(40), 1173, https://doi.org/10.21105/joss.01173
+
+
 ## NodeLab
 NodeLab is a simple MATLAB-package for unstructured node-generation and refinement for meshfree modeling in 2D arbitrary domains. The final output can be seen in the 'workspace'. Following are the description of Input/Output variables of NodeLab:
 ### Input: 
