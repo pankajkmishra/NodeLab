@@ -1,4 +1,4 @@
-
+2025: You can also use this package for testing physics-informed neural networks, DeepOnets and other neural operators for solving PDEs
 
 Mishra, Pankaj K (2019). NodeLab: A MATLAB package for meshfree node-generation and adaptive refinement. Journal of Open Source Software, 4(40), 1173, https://doi.org/10.21105/joss.01173
 
